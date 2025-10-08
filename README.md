@@ -8,13 +8,21 @@ A Flutter application demonstrating deep linking implementation using the app_li
 
 ## Testing Deep Links
 
-To test the deep link functionality, use the following adb command:
+To test the deep link functionality, use the following adb commands:
 
+### Details Deep Link
 ```bash
 adb shell am start -a android.intent.action.VIEW -d "myapp://details/42" com.example.chimera
 ```
 
 Replace `42` with any ID you want to test.
+
+### Profile Deep Link
+```bash
+adb shell am start -a android.intent.action.VIEW -d "myapp://profile/alex" com.example.chimera
+```
+
+Replace `alex` with any username you want to test.
 
 ## Reflection Questions
 
@@ -135,4 +143,6 @@ git pull
 
 - Package name: com.example.chimera
 - URL scheme: myapp://
-- Supported deep link format: myapp://details/{id}
+- Supported deep link formats: 
+  - myapp://details/{id}
+  - myapp://profile/{username}
