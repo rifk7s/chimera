@@ -25,6 +25,14 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="myapp" android:host="details" />
             </intent-filter>
+
+            <!-- Profile deep link handler -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="myapp" android:host="profile" />
+            </intent-filter>
         </activity>
 
         <!-- Don't delete the meta-data below.
