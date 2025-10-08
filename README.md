@@ -1,21 +1,10 @@
 # Chimera - Deep Link Demo
 
+[![Flutter Version](https://img.shields.io/badge/Flutter-3.9.0-02569B?style=flat&logo=flutter)](https://flutter.dev)
+[![Dart SDK](https://img.shields.io/badge/Dart-3.9.0-0175C2?style=flat&logo=dart)](https://dart.dev)
+[![app_links](https://img.shields.io/badge/app__links-6.4.1-blue?style=flat)](https://pub.dev/packages/app_links)
+
 A Flutter application demonstrating deep linking implementation using the app_links package.
-
-## Project Overview
-
-This project implements deep linking functionality that allows external applications or browsers to open specific screens within the app using custom URL schemes (e.g., `myapp://details/42`).
-
-## Features
-
-- Custom URL scheme handling (`myapp://`)
-- Navigation to specific screens via deep links
-- Support for passing parameters through URLs
-- Real-time link status display
-
-## Package Used
-
-- **app_links**: ^6.4.1 - A modern package for handling deep links and universal links across all platforms
 
 ## Testing Deep Links
 
@@ -27,7 +16,7 @@ adb shell am start -a android.intent.action.VIEW -d "myapp://details/42" com.exa
 
 Replace `42` with any ID you want to test.
 
-## Step 11: Reflection Questions
+## Reflection Questions
 
 ### 1. Concept Check
 
