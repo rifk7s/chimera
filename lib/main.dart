@@ -10,6 +10,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   late AppLinks _appLinks;
   StreamSubscription? _sub;
   String _status = 'Waiting for link...';
@@ -41,8 +42,7 @@ class _MyAppState extends State<MyApp> {
     if (uri.host == 'details') {
       // Example link: myapp://details/42
       final id = uri.pathSegments.isNotEmpty ? uri.pathSegments[0] : 'unknown';
-      Navigator.push(
-        context,
+      navigatorKey.currentState?.push(
         MaterialPageRoute(builder: (context) => DetailScreen(id: id)),
       );
     }
@@ -57,6 +57,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
       title: 'Deep Link Demo',
       home: Scaffold(
         appBar: AppBar(title: Text('Home')),
